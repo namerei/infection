@@ -9,8 +9,8 @@ import UIKit
 
 class MyViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     var collectionView: UICollectionView!
-    let numberOfItems = 1000
-//    var cellColors = [Int: UIColor]() // Dictionary to store cell colors
+//    let numberOfItems = 1000
+    var population = Population(count: 1000)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,28 +28,22 @@ class MyViewController: UIViewController, UICollectionViewDataSource, UICollecti
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return numberOfItems
+        return population.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PersonCell.id, for: indexPath) as! PersonCell
-        
-        // Retrieve color from dictionary, or set default color
-//        cell.normalColor = cellColors[indexPath.item] ?? .green
-//        cell.color = .blue
-//        cell.selectedColor = .blue
         
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if let cell = collectionView.cellForItem(at: indexPath) as? PersonCell {
-            cell.isSelected = !cell.isSelected
+//            cell.isSelected = !cell.isSelected
             
-            // Store color in dictionary
-            print("\(indexPath.item) was selected")
-//            cellColors[indexPath.item] = cell.isSelected ? cell.selectedColor : cell.normalColor
-//            cell.color = .blue
+            //MARK: logic
+            population.infectPerson(position: indexPath.row)
+            
         }
     }
 }

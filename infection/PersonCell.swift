@@ -1,5 +1,5 @@
 //
-//  CusomView.swift
+//  PersonCell.swift
 //  infection
 //
 //  Created by Nikita Evdokimov on 23.03.24.
@@ -11,7 +11,6 @@ class PersonCell: UICollectionViewCell {
     static var id = "PersonCell"
     
     var color = UIColor(.green)
-//    var model: Model?
     var position: Int?
     
     override var isSelected: Bool {
