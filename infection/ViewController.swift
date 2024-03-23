@@ -55,13 +55,14 @@ class MyViewController: UIViewController, UICollectionViewDataSource, UICollecti
             cell.backgroundColor = (population.persons[positionInfected].isInfected ? .blue : .green)
             
             //MARK: - async
-            population.spreadInfection { result in
-                self.population.persons = result
+            population.spreadInfection {
                 DispatchQueue.main.async {
                     self.collectionView.reloadData()
                 }
-                //            collectionView.reloadData()
             }
+            
+            //MARK: - async after
+            //            population.spreadInfection()
         }
     }
     

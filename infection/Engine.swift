@@ -23,38 +23,35 @@ class Population {
         print("\(persons.filter({$0.isInfected}).count) persons infected")
     }
     
-    func spreadInfection(completion: @escaping ([Person]) -> Void) {
-        DispatchQueue.global().async { [self] in
-            
-            var result = persons
-            
-            let randomNumber = Int.random(in: 0...400)
-            //            persons[10].infect()
-            result[randomNumber].infect()
-            
-            let randomNumber1 = Int.random(in: 0...400)
-            result[randomNumber1].infect()
-            
-            let randomNumber2 = Int.random(in: 0...400)
-            result[randomNumber2].infect()
-            
-            print("\(persons.filter({$0.isInfected}).count) persons infected")
-//            }
-            sleep(1)
-            
-            // Вызываем замыкание для передачи результата
-            DispatchQueue.main.async {
-                completion(result)
+        func spreadInfection(completion: @escaping () -> Void) {
+            DispatchQueue.global().async { [self] in
+    
+                for _ in 0...400 {
+                    let randomNumber = Int.random(in: 0...400)
+                    self.persons[randomNumber].infect()
+                    
+                    print("\(persons.filter({$0.isInfected}).count) persons infected")
+                    sleep(UInt32(0.4))
+                    
+                    
+                    DispatchQueue.main.async {
+                        completion()
+                    }
+                }
             }
         }
+    
     }
-}
     
 //    func spreadInfection() {
-//        DispatchQueue.global().async { [self] in
-
+//        while(true) {
+//            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+//                let randomNumber = Int.random(in: 0...400)
+//                self.persons[randomNumber].infect()
+//            }
 //        }
-    
+//    }
+//}
     //MARK: - reload data in main quee
 //    }
     
