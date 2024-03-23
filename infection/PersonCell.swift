@@ -9,6 +9,7 @@ import UIKit
 
 class PersonCell: UICollectionViewCell {
     static var id = "PersonCell"
+    static var width: CGFloat = 40
     
 //    var color = UIColor(.green)
 //    var position: Int?

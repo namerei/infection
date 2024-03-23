@@ -10,22 +10,30 @@ import UIKit
 class MyViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     var collectionView: UICollectionView!
     //    let numberOfItems = 1000
-    var population = Population(count: 100)
+    var population = Population(count: 320)
+//    var engine = Engine()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setLayout()
+//        engine.calculateRowAndColumns(width: collectionView.frame.width)
         
+        view.addSubview(collectionView)
+    }
+    
+    //MARK: - set UI
+    func setLayout() {
         let layout = UICollectionViewFlowLayout()
 
-        layout.itemSize = CGSize(width: 20, height: 20)
+        layout.itemSize = CGSize(width: PersonCell.width, height: PersonCell.width)
+        layout.minimumInteritemSpacing = 2// Горизонтальный интервал
+        layout.minimumLineSpacing = layout.minimumInteritemSpacing + 1
         
         collectionView = UICollectionView(frame: view.frame, collectionViewLayout: layout)
         collectionView.register(PersonCell.self, forCellWithReuseIdentifier: PersonCell.id)
         collectionView.dataSource = self
         collectionView.delegate = self
         collectionView.backgroundColor = .white
-        
-        view.addSubview(collectionView)
     }
     
     //MARK: - UICollectionViewDataSource, UICollectionViewDelegate
@@ -55,11 +63,11 @@ class MyViewController: UIViewController, UICollectionViewDataSource, UICollecti
             cell.backgroundColor = (population.persons[positionInfected].isInfected ? .blue : .green)
             
             //MARK: - async
-            population.spreadInfectionRandom {
-                DispatchQueue.main.async {
-                    self.collectionView.reloadData()
-                }
-            }
+//            population.spreadInfectionRandom {
+//                DispatchQueue.main.async {
+//                    self.collectionView.reloadData()
+//                }
+//            }
             
             //MARK: - async after
             //            population.spreadInfection()

@@ -66,12 +66,23 @@ class Person {
 
 }
 
-//class Engine {
-//    var population: Population?
-//    var person = Person()
-//    var delegate: PersonCell? = nil
-//    
-//    func infect(personPosition: Int) {
-//
+
+class Engine {
+    var row:Double = 0.0
+    var columns = 0
+    var width: CGFloat = 0
+//    var height = 0
+    
+    func calculateRowAndColumns(width: CGFloat) {
+        print(width)
+        row = (width) / (PersonCell.width + 2.0)
+        var rowInt = Int(round(row))
+        print("\(row)'s rows")
+        print("\(rowInt)'s rows")
+        print("\((PersonCell.width + 2.0) * row)")
+    }
+    
+//    init(width: CGFloat) {
+//        self.width = width
 //    }
-//}
+}
