@@ -10,13 +10,13 @@ import UIKit
 class MyViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     var collectionView: UICollectionView!
     //    let numberOfItems = 1000
-    var population = Population(count: 1000)
+    var population = Population(count: 100)
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         let layout = UICollectionViewFlowLayout()
-        //        layout.itemSize = CGSize(width: 50, height: 50)
+
         layout.itemSize = CGSize(width: 20, height: 20)
         
         collectionView = UICollectionView(frame: view.frame, collectionViewLayout: layout)
@@ -55,7 +55,7 @@ class MyViewController: UIViewController, UICollectionViewDataSource, UICollecti
             cell.backgroundColor = (population.persons[positionInfected].isInfected ? .blue : .green)
             
             //MARK: - async
-            population.spreadInfection {
+            population.spreadInfectionRandom {
                 DispatchQueue.main.async {
                     self.collectionView.reloadData()
                 }
