@@ -22,11 +22,25 @@ class Population {
         persons[position].infect()
         print("\(persons.filter({$0.isInfected}).count) persons infected")
     }
+    
+    func spreadInfection() {
+//        DispatchQueue.global().async { [self] in
+            let randomNumber = Int.random(in: 0...1000)
+//            persons[10].infect()
+//            persons[25].infect()
+//            persons[50].infect()
+//            persons[100].infect()
+//            persons[150].infect()
+            print("\(persons.filter({$0.isInfected}).count) persons infected")
+        }
+    
+    //MARK: - reload data in main quee
+//    }
+    
 }
 
 class Person {
     var isInfected: Bool = false
-        
     var position: Int = -1
     
     func infect() {

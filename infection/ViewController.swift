@@ -16,7 +16,8 @@ class MyViewController: UIViewController, UICollectionViewDataSource, UICollecti
         super.viewDidLoad()
         
         let layout = UICollectionViewFlowLayout()
-        layout.itemSize = CGSize(width: 50, height: 50)
+//        layout.itemSize = CGSize(width: 50, height: 50)
+        layout.itemSize = CGSize(width: 20, height: 20)
         
         collectionView = UICollectionView(frame: view.frame, collectionViewLayout: layout)
         collectionView.register(PersonCell.self, forCellWithReuseIdentifier: PersonCell.id)
@@ -52,6 +53,9 @@ class MyViewController: UIViewController, UICollectionViewDataSource, UICollecti
             let positionInfected = indexPath.row
             population.infectPerson(positionInfected)
             cell.backgroundColor = (population.persons[positionInfected].isInfected ? .blue : .green)
+            
+            
+            population.spreadInfection()
 //            collectionView.reloadData()
         }
     }
