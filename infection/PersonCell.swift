@@ -12,13 +12,18 @@ class PersonCell: UICollectionViewCell {
     
     var color = UIColor(.green)
 //    var model: Model?
-    var positin: Int?
+    var position: Int?
     
     override var isSelected: Bool {
         didSet {
-            contentView.backgroundColor = color
+//            contentView.backgroundColor = .blue
 //            model!.infect()
         }
+    }
+    
+    init(position: Int) {
+        super.init(frame: .zero)
+        self.position = position
     }
     
     override init(frame: CGRect) {

@@ -9,7 +9,7 @@ import UIKit
 
 class MyViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     var collectionView: UICollectionView!
-    let numberOfItems = 100
+    let numberOfItems = 1000
 //    var cellColors = [Int: UIColor]() // Dictionary to store cell colors
     
     override func viewDidLoad() {
@@ -36,7 +36,7 @@ class MyViewController: UIViewController, UICollectionViewDataSource, UICollecti
         
         // Retrieve color from dictionary, or set default color
 //        cell.normalColor = cellColors[indexPath.item] ?? .green
-        cell.color = .blue
+//        cell.color = .blue
 //        cell.selectedColor = .blue
         
         return cell
@@ -49,7 +49,7 @@ class MyViewController: UIViewController, UICollectionViewDataSource, UICollecti
             // Store color in dictionary
             print("\(indexPath.item) was selected")
 //            cellColors[indexPath.item] = cell.isSelected ? cell.selectedColor : cell.normalColor
-            cell.color = .blue
+//            cell.color = .blue
         }
     }
 }
