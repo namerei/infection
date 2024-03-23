@@ -23,21 +23,42 @@ class Population {
         print("\(persons.filter({$0.isInfected}).count) persons infected")
     }
     
-    func spreadInfection() {
-//        DispatchQueue.global().async { [self] in
-            let randomNumber = Int.random(in: 0...1000)
-//            persons[10].infect()
-//            persons[25].infect()
-//            persons[50].infect()
-//            persons[100].infect()
-//            persons[150].infect()
+    func spreadInfection(completion: @escaping ([Person]) -> Void) {
+        DispatchQueue.global().async { [self] in
+            
+            var result = persons
+            
+            let randomNumber = Int.random(in: 0...400)
+            //            persons[10].infect()
+            result[randomNumber].infect()
+            
+            let randomNumber1 = Int.random(in: 0...400)
+            result[randomNumber1].infect()
+            
+            let randomNumber2 = Int.random(in: 0...400)
+            result[randomNumber2].infect()
+            
             print("\(persons.filter({$0.isInfected}).count) persons infected")
+//            }
+            sleep(1)
+            
+            // Вызываем замыкание для передачи результата
+            DispatchQueue.main.async {
+                completion(result)
+            }
         }
+    }
+}
+    
+//    func spreadInfection() {
+//        DispatchQueue.global().async { [self] in
+
+//        }
     
     //MARK: - reload data in main quee
 //    }
     
-}
+//}
 
 class Person {
     var isInfected: Bool = false
