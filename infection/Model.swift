@@ -13,7 +13,7 @@ class Population {
     
     init(count: Int) {
         self.count = count
-        for i in 0..<count {
+        for _ in 0..<count {
             self.persons?.append(Person())
         }
     }
@@ -29,6 +29,6 @@ class Model {
     var delegate: PersonCell? = nil
     
     func infect() {
-        print("was infected ")
+        print("was infected")
     }
 }

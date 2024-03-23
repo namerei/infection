@@ -8,22 +8,24 @@
 import UIKit
 
 class PersonCell: UICollectionViewCell {
-    var color = UIColor(.green)
-    var model: Model?
     static var id = "PersonCell"
+    
+    var color = UIColor(.green)
+//    var model: Model?
+    var positin: Int?
     
     override var isSelected: Bool {
         didSet {
             contentView.backgroundColor = color
-            model!.infect()
+//            model!.infect()
         }
     }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         contentView.backgroundColor = color
-        model = Model()
-        model!.delegate = self
+//        model = Model()
+//        model!.delegate = self
     }
     
     required init?(coder: NSCoder) {
