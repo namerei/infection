@@ -18,8 +18,9 @@ class Population {
         }
     }
     
-    func infectPerson(position: Int) {
+    func infectPerson(_ position: Int) {
         persons[position].infect()
+        print("\(persons.filter({$0.isInfected}).count) persons infected")
     }
 }
 
@@ -34,13 +35,9 @@ class Person {
     }
     
     init(position: Int) {
-//        self.isInfected = isInfected
         self.position = position
     }
-//    func infect() {
-//        print("was infected")
-//        isInfected = true
-//    }
+
 }
 
 //class Engine {

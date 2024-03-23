@@ -42,8 +42,9 @@ class MyViewController: UIViewController, UICollectionViewDataSource, UICollecti
 //            cell.isSelected = !cell.isSelected
             
             //MARK: logic
-            population.infectPerson(position: indexPath.row)
-            
+            let positionInfected = indexPath.row
+            population.infectPerson(positionInfected)
+//            cell.color = .blue
         }
     }
 }

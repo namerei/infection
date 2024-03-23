@@ -15,7 +15,7 @@ class PersonCell: UICollectionViewCell {
     
     override var isSelected: Bool {
         didSet {
-//            contentView.backgroundColor = .blue
+            contentView.backgroundColor = .blue
 //            model!.infect()
         }
     }
