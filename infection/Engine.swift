@@ -26,12 +26,18 @@ class Population {
         func spreadInfection(completion: @escaping () -> Void) {
             DispatchQueue.global().async { [self] in
     
-                for _ in 0...400 {
-                    let randomNumber = Int.random(in: 0...400)
-                    self.persons[randomNumber].infect()
+                for _ in 0..<count {
+                    let randomNumber = Int.random(in: 0..<count)
+//                    self.persons[randomNumber].infect()
+                    
+                    if persons[randomNumber].isInfected {
+                        
+                    } else {
+                        persons[randomNumber].infect()
+                    }
                     
                     print("\(persons.filter({$0.isInfected}).count) persons infected")
-                    sleep(UInt32(0.4))
+                    sleep(UInt32(0.7))
                     
                     
                     DispatchQueue.main.async {
