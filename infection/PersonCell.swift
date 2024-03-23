@@ -10,24 +10,24 @@ import UIKit
 class PersonCell: UICollectionViewCell {
     static var id = "PersonCell"
     
-    var color = UIColor(.green)
-    var position: Int?
+//    var color = UIColor(.green)
+//    var position: Int?
     
     override var isSelected: Bool {
         didSet {
-            contentView.backgroundColor = .blue
+//            contentView.backgroundColor = .blue
 //            model!.infect()
         }
     }
     
-    init(position: Int) {
-        super.init(frame: .zero)
-        self.position = position
-    }
+//    init(position: Int) {
+//        super.init(frame: .zero)
+//        self.position = position
+//    }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        contentView.backgroundColor = color
+//        contentView.backgroundColor = UIColor(.green)
 //        model = Model()
 //        model!.delegate = self
     }

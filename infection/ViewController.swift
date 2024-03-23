@@ -27,6 +27,7 @@ class MyViewController: UIViewController, UICollectionViewDataSource, UICollecti
         view.addSubview(collectionView)
     }
     
+    //MARK: - UICollectionViewDataSource, UICollectionViewDelegate
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return population.count
     }
@@ -34,6 +35,12 @@ class MyViewController: UIViewController, UICollectionViewDataSource, UICollecti
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PersonCell.id, for: indexPath) as! PersonCell
         
+        //MARK: - logic
+//        print("her")
+            let positionInfected = indexPath.row
+            cell.backgroundColor = (population.persons[positionInfected].isInfected ? .blue : UIColor(.green))
+//            cell.backgroundColor = UIColor(.green)
+//
         return cell
     }
     
@@ -44,7 +51,8 @@ class MyViewController: UIViewController, UICollectionViewDataSource, UICollecti
             //MARK: logic
             let positionInfected = indexPath.row
             population.infectPerson(positionInfected)
-//            cell.color = .blue
+            cell.backgroundColor = (population.persons[positionInfected].isInfected ? .blue : .green)
+//            collectionView.reloadData()
         }
     }
 }
