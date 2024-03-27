@@ -82,7 +82,7 @@ class ParametersTVC: UITableViewController {
     }
     
     func correctFieldsChecked() -> Bool {
-        if groupSize == nil || infectionFactor == nil || period == nil || groupSize! < 1 || infectionFactor! < 1 || infectionFactor! > 8 || period! < 1 || period! > 60 {
+        if groupSize == nil || infectionFactor == nil || period == nil || groupSize! < 1 || infectionFactor! < 1 || period! < 1 {
             self.showEmptyFieldsAlert()
             return false
         }

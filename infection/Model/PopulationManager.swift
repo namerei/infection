@@ -96,7 +96,7 @@ class PopulationManager: PopulationDelegate {
     }
     
     private func update() {
-        print("CHECK:  \(persons.filter({$0.isInfected}).count), stopped: \(persons.filter({$0.stopped}).count)")
+//        print("CHECK:  \(persons.filter({$0.isInfected}).count), stopped: \(persons.filter({$0.stopped}).count)")
         delegate?.update()
     }
 
@@ -105,7 +105,6 @@ class PopulationManager: PopulationDelegate {
         if !result {
             DispatchQueue.main.async { [weak self] in
                 guard let self else { return }
-//                guard let self else { return }
                 delegate?.finish()
             }
         }
@@ -113,12 +112,24 @@ class PopulationManager: PopulationDelegate {
     }
     
     func recalculateColumns() {
-        let engine = Engine()
-        let columns = engine.calculateColumns(width: width, count: groupSize)
-        print("NEW COLUMNS = \(columns)")
-        for position in 0..<groupSize {
-            self.persons.append(Person(position: position))
-            self.persons[position].columns = columns
+//        let concurrentQueue = DispatchQueue(label: "com.example.concurrentQueue", attributes: .concurrent)
+        let columnsGroup = DispatchGroup()
+        
+//        concurrentQueue.async { [weak self] in
+        calc.async(group: columnsGroup) { [weak self] in
+            guard let self else { return }
+            let engine = Engine()
+            let columns = engine.calculateColumns(width: width, count: groupSize)
+            print("NEW COLUMNS = \(columns)")
+            for position in 0..<groupSize {
+                persons.append(Person(position: position))
+                persons[position].columns = columns
+            }
+            
+            columnsGroup.notify(queue: .main) {[weak self] in
+                guard let self else {return}
+                update()
+            }
         }
     }
     

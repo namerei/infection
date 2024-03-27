@@ -57,7 +57,6 @@ class InfectionViewController: UIViewController  {
     
     func arrangeInfectionCollectionView() {
         
-        
         view.addSubview(infectionCollectionView)
         infectionCollectionView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
@@ -93,17 +92,25 @@ class InfectionViewController: UIViewController  {
     //MARK: Actions
     @objc private func plusScaleButtonTapped() {
         
-        if PersonCell.width < 50 {
+        if PersonCell.width < 40 {
             PersonCell.width += 5
             population?.recalculateColumns()
+//                guard let self else { return }
+//                self.infectionCollectionView.reloadData()
+//                print("W +: \(PersonCell.width)")
+//            }
         }
         print("+")
     }
     
     @objc private func minusScaleButtonTapped() {
-        if PersonCell.width > 10 {
+        if PersonCell.width > 20 {
             PersonCell.width -= 5
-            population?.recalculateColumns()
+            population?.recalculateColumns() 
+//                guard let self else { return }
+//                self.infectionCollectionView.reloadData()
+//                print("W -: \(PersonCell.width)")
+//            }
         }
         print("-")
     }
@@ -119,7 +126,7 @@ extension InfectionViewController: EpidemicCalculatorDelegate {
     
     func finish() {
         //MARK: - show alert
-        showGameOver()
-        print("finish")
+        showGameOverAlert()
+//        print("finish")
     }
 }
