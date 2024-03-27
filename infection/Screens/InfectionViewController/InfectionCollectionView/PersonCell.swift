@@ -21,10 +21,6 @@ class PersonCell: UICollectionViewCell {
         }
     }
     
-//    init(position: Int) {
-//        super.init(frame: .zero)
-//        self.position = position
-//    }
     
     override init(frame: CGRect) {
         super.init(frame: frame)

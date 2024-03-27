@@ -9,23 +9,45 @@
 /* Begin PBXBuildFile section */
 		FA0B4F1D2BAC444E00BC6CE1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0B4F1C2BAC444E00BC6CE1 /* AppDelegate.swift */; };
 		FA0B4F1F2BAC444E00BC6CE1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0B4F1E2BAC444E00BC6CE1 /* SceneDelegate.swift */; };
-		FA0B4F212BAC444E00BC6CE1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0B4F202BAC444E00BC6CE1 /* ViewController.swift */; };
+		FA0B4F212BAC444E00BC6CE1 /* InfectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0B4F202BAC444E00BC6CE1 /* InfectionViewController.swift */; };
 		FA0B4F262BAC445000BC6CE1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA0B4F252BAC445000BC6CE1 /* Assets.xcassets */; };
 		FA0B4F292BAC445000BC6CE1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA0B4F272BAC445000BC6CE1 /* LaunchScreen.storyboard */; };
-		FA0B4F4E2BAEF1D100BC6CE1 /* Engine.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0B4F4D2BAEF1D100BC6CE1 /* Engine.swift */; };
 		FA0B4F502BAEF2EF00BC6CE1 /* PersonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0B4F4F2BAEF2EF00BC6CE1 /* PersonCell.swift */; };
+		FAF2BBEC2BB1F99300F80859 /* PopulationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF2BBEB2BB1F99300F80859 /* PopulationManager.swift */; };
+		FAF2BBEE2BB3E91F00F80859 /* ParametersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF2BBED2BB3E91F00F80859 /* ParametersTableViewController.swift */; };
+		FAF2BBF32BB3F29B00F80859 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF2BBF22BB3F29B00F80859 /* CustomTextField.swift */; };
+		FAF2BBFF2BB3FF8600F80859 /* ViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF2BBFE2BB3FF8600F80859 /* ViewControllerExtension.swift */; };
+		FAF2BC032BB4363900F80859 /* ParameterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF2BC022BB4363900F80859 /* ParameterCell.swift */; };
+		FAF2BC072BB457CF00F80859 /* ParametersTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF2BC062BB457CF00F80859 /* ParametersTVC.swift */; };
+		FAF2BC092BB4845B00F80859 /* InfectionCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF2BC082BB4845B00F80859 /* InfectionCollectionView.swift */; };
+		FAF2BC0B2BB4996C00F80859 /* ResultLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF2BC0A2BB4996C00F80859 /* ResultLabel.swift */; };
+		FAF2BC0E2BB49DC300F80859 /* PlusScaleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF2BC0D2BB49DC300F80859 /* PlusScaleButton.swift */; };
+		FAF2BC102BB4A10E00F80859 /* MinusScaleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF2BC0F2BB4A10E00F80859 /* MinusScaleButton.swift */; };
+		FAF2BC122BB4A77100F80859 /* ColumnsCellsEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF2BC112BB4A77100F80859 /* ColumnsCellsEngine.swift */; };
+		FAF2BC142BB4A7CA00F80859 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF2BC132BB4A7CA00F80859 /* Person.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		FA0B4F192BAC444E00BC6CE1 /* infection.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = infection.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA0B4F1C2BAC444E00BC6CE1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FA0B4F1E2BAC444E00BC6CE1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		FA0B4F202BAC444E00BC6CE1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FA0B4F202BAC444E00BC6CE1 /* InfectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfectionViewController.swift; sourceTree = "<group>"; };
 		FA0B4F252BAC445000BC6CE1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FA0B4F282BAC445000BC6CE1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FA0B4F2A2BAC445000BC6CE1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FA0B4F4D2BAEF1D100BC6CE1 /* Engine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Engine.swift; sourceTree = "<group>"; };
 		FA0B4F4F2BAEF2EF00BC6CE1 /* PersonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonCell.swift; sourceTree = "<group>"; };
+		FAF2BBEB2BB1F99300F80859 /* PopulationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopulationManager.swift; sourceTree = "<group>"; };
+		FAF2BBED2BB3E91F00F80859 /* ParametersTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParametersTableViewController.swift; sourceTree = "<group>"; };
+		FAF2BBF22BB3F29B00F80859 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		FAF2BBFE2BB3FF8600F80859 /* ViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerExtension.swift; sourceTree = "<group>"; };
+		FAF2BC022BB4363900F80859 /* ParameterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParameterCell.swift; sourceTree = "<group>"; };
+		FAF2BC062BB457CF00F80859 /* ParametersTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParametersTVC.swift; sourceTree = "<group>"; };
+		FAF2BC082BB4845B00F80859 /* InfectionCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfectionCollectionView.swift; sourceTree = "<group>"; };
+		FAF2BC0A2BB4996C00F80859 /* ResultLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultLabel.swift; sourceTree = "<group>"; };
+		FAF2BC0D2BB49DC300F80859 /* PlusScaleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlusScaleButton.swift; sourceTree = "<group>"; };
+		FAF2BC0F2BB4A10E00F80859 /* MinusScaleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinusScaleButton.swift; sourceTree = "<group>"; };
+		FAF2BC112BB4A77100F80859 /* ColumnsCellsEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColumnsCellsEngine.swift; sourceTree = "<group>"; };
+		FAF2BC132BB4A7CA00F80859 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,10 +80,11 @@
 		FA0B4F1B2BAC444E00BC6CE1 /* infection */ = {
 			isa = PBXGroup;
 			children = (
-				FA0B4F202BAC444E00BC6CE1 /* ViewController.swift */,
-				FA0B4F4D2BAEF1D100BC6CE1 /* Engine.swift */,
-				FA0B4F4F2BAEF2EF00BC6CE1 /* PersonCell.swift */,
 				FA0B4F302BAC478200BC6CE1 /* Resources */,
+				FAF2BBFD2BB3FF6200F80859 /* Extensions */,
+				FAF2BBF82BB3F7FC00F80859 /* Screens */,
+				FAF2BBF52BB3F76A00F80859 /* View */,
+				FAF2BBF42BB3F75C00F80859 /* Model */,
 				FA0B4F2A2BAC445000BC6CE1 /* Info.plist */,
 			);
 			path = infection;
@@ -76,6 +99,80 @@
 				FA0B4F272BAC445000BC6CE1 /* LaunchScreen.storyboard */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		FAF2BBF12BB3F28200F80859 /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				FAF2BC0A2BB4996C00F80859 /* ResultLabel.swift */,
+				FAF2BBF22BB3F29B00F80859 /* CustomTextField.swift */,
+				FAF2BC0D2BB49DC300F80859 /* PlusScaleButton.swift */,
+				FAF2BC0F2BB4A10E00F80859 /* MinusScaleButton.swift */,
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
+		FAF2BBF42BB3F75C00F80859 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FAF2BBEB2BB1F99300F80859 /* PopulationManager.swift */,
+				FAF2BC112BB4A77100F80859 /* ColumnsCellsEngine.swift */,
+				FAF2BC132BB4A7CA00F80859 /* Person.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FAF2BBF52BB3F76A00F80859 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FAF2BBF12BB3F28200F80859 /* CustomViews */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FAF2BBF62BB3F78900F80859 /* InfectionViewController */ = {
+			isa = PBXGroup;
+			children = (
+				FA0B4F202BAC444E00BC6CE1 /* InfectionViewController.swift */,
+				FAF2BC0C2BB49D9F00F80859 /* InfectionCollectionView */,
+			);
+			path = InfectionViewController;
+			sourceTree = "<group>";
+		};
+		FAF2BBF72BB3F7EE00F80859 /* ParametersVC */ = {
+			isa = PBXGroup;
+			children = (
+				FAF2BBED2BB3E91F00F80859 /* ParametersTableViewController.swift */,
+				FAF2BC022BB4363900F80859 /* ParameterCell.swift */,
+				FAF2BC062BB457CF00F80859 /* ParametersTVC.swift */,
+			);
+			path = ParametersVC;
+			sourceTree = "<group>";
+		};
+		FAF2BBF82BB3F7FC00F80859 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				FAF2BBF72BB3F7EE00F80859 /* ParametersVC */,
+				FAF2BBF62BB3F78900F80859 /* InfectionViewController */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		FAF2BBFD2BB3FF6200F80859 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				FAF2BBFE2BB3FF8600F80859 /* ViewControllerExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		FAF2BC0C2BB49D9F00F80859 /* InfectionCollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				FA0B4F4F2BAEF2EF00BC6CE1 /* PersonCell.swift */,
+				FAF2BC082BB4845B00F80859 /* InfectionCollectionView.swift */,
+			);
+			path = InfectionCollectionView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,11 +245,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA0B4F4E2BAEF1D100BC6CE1 /* Engine.swift in Sources */,
+				FAF2BBFF2BB3FF8600F80859 /* ViewControllerExtension.swift in Sources */,
 				FA0B4F502BAEF2EF00BC6CE1 /* PersonCell.swift in Sources */,
-				FA0B4F212BAC444E00BC6CE1 /* ViewController.swift in Sources */,
+				FAF2BC032BB4363900F80859 /* ParameterCell.swift in Sources */,
+				FAF2BC0E2BB49DC300F80859 /* PlusScaleButton.swift in Sources */,
+				FAF2BC0B2BB4996C00F80859 /* ResultLabel.swift in Sources */,
+				FA0B4F212BAC444E00BC6CE1 /* InfectionViewController.swift in Sources */,
+				FAF2BBF32BB3F29B00F80859 /* CustomTextField.swift in Sources */,
+				FAF2BC102BB4A10E00F80859 /* MinusScaleButton.swift in Sources */,
+				FAF2BC122BB4A77100F80859 /* ColumnsCellsEngine.swift in Sources */,
 				FA0B4F1D2BAC444E00BC6CE1 /* AppDelegate.swift in Sources */,
 				FA0B4F1F2BAC444E00BC6CE1 /* SceneDelegate.swift in Sources */,
+				FAF2BC092BB4845B00F80859 /* InfectionCollectionView.swift in Sources */,
+				FAF2BC072BB457CF00F80859 /* ParametersTVC.swift in Sources */,
+				FAF2BBEC2BB1F99300F80859 /* PopulationManager.swift in Sources */,
+				FAF2BC142BB4A7CA00F80859 /* Person.swift in Sources */,
+				FAF2BBEE2BB3E91F00F80859 /* ParametersTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,8 +409,8 @@
 				INFOPLIST_FILE = infection/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -329,8 +437,8 @@
 				INFOPLIST_FILE = infection/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
