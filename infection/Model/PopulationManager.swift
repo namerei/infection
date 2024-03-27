@@ -34,8 +34,7 @@ class PopulationManager: PopulationDelegate {
     var period : Int
     
     //MARK: - engine columns
-//    var columns: Int = 9
-    var width: CGFloat = 0.0
+//    var width: CGFloat = 0.0
    
     init(groupSize: Int, infectionFactor: Int, period: Int, width: CGFloat) {
         self.groupSize = groupSize

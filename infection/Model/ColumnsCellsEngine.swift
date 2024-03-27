@@ -21,11 +21,7 @@ class Engine {
         let columnsDouble = (width) / (PersonCell.width + 2.0)
         let columns = Int(round(columnsDouble))
         print("\(columns)'s columns")
-        
-        //        row = Int(round(Double(count) / Double(columns)))
-        //        print("\(row)'s rows")
-        //        print("\(rowInt)'s rows")
-        //        print("\((PersonCell.width + 2.0) * row)")
+
         return columns
     }
 }

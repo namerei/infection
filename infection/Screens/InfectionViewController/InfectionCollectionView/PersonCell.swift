@@ -9,27 +9,22 @@ import UIKit
 
 class PersonCell: UICollectionViewCell {
     static var id = "PersonCell"
-    static var width: CGFloat = 40
+    static var width: CGFloat = 30
     
-//    var color = UIColor(.green)
-//    var position: Int?
-    
-    override var isSelected: Bool {
-        didSet {
-//            contentView.backgroundColor = .blue
-//            model!.infect()
-        }
-    }
-    
+//    override var isSelected: Bool {
+//        didSet {
+//        }
+//    }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-//        contentView.backgroundColor = UIColor(.green)
-//        model = Model()
-//        model!.delegate = self
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+//    func widthPlus() {
+//        
+//    }
 }
