@@ -34,12 +34,15 @@ class PopulationManager: PopulationDelegate {
     var period : Int
     
     //MARK: - engine columns
-//    var width: CGFloat = 0.0
+    var width: CGFloat = 0.0
+    
+
    
     init(groupSize: Int, infectionFactor: Int, period: Int, width: CGFloat) {
         self.groupSize = groupSize
         self.infectionFactor = infectionFactor
         self.period = period
+        self.width = width
         print("POP = \(groupSize), width = \(width)")
         
         //MARK: - engine
@@ -107,6 +110,16 @@ class PopulationManager: PopulationDelegate {
             }
         }
         return result
+    }
+    
+    func recalculateColumns() {
+        let engine = Engine()
+        let columns = engine.calculateColumns(width: width, count: groupSize)
+        print("NEW COLUMNS = \(columns)")
+        for position in 0..<groupSize {
+            self.persons.append(Person(position: position))
+            self.persons[position].columns = columns
+        }
     }
     
     //MARK: - spread around

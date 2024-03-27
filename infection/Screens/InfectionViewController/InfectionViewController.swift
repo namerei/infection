@@ -95,16 +95,16 @@ class InfectionViewController: UIViewController  {
         
         if PersonCell.width < 50 {
             PersonCell.width += 5
+            population?.recalculateColumns()
         }
-//        return
         print("+")
     }
     
     @objc private func minusScaleButtonTapped() {
         if PersonCell.width > 10 {
             PersonCell.width -= 5
+            population?.recalculateColumns()
         }
-//        print("-Width = \(PersonCell.width)")
         print("-")
     }
     

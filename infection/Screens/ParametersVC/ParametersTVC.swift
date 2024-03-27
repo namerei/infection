@@ -10,8 +10,8 @@ import UIKit
 class ParametersTVC: UITableViewController {
     let cellData: [(title: String, placeholder: String)] = [
         ("Group Size", "Enter group size"),
-        ("Infection Factor", "Enter infection factor"),
-        ("Period", "Enter period")
+        ("Infection Factor ", "Enter infection factor 1..8"),
+        ("Period", "Enter period 1..60")
     ]
     
     let startButton = UIButton()
