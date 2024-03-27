@@ -12,11 +12,7 @@ class InfectionCollectionView: UICollectionView, UICollectionViewDataSource, UIC
     
 
     override init(frame: CGRect, collectionViewLayout layout: UICollectionViewLayout) {
-        
-//        let fixedFrame = CGRect(x: frame.origin.x, y: frame.origin.y, width: 500, height: 500)
-//        let layout = UICollectionViewFlowLayout()
-//        super.init(frame: fixedFrame, collectionViewLayout: layout)
-        
+
         let layout = UICollectionViewFlowLayout()
         super.init(frame: frame, collectionViewLayout: layout)
         layout.minimumInteritemSpacing = 1// Горизонтальный интервал

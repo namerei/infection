@@ -73,14 +73,10 @@ class ParametersTVC: UITableViewController {
     func goToInfectionVC() {
         // Perform simulation with extracted parameters
         let infectionVC = InfectionViewController()
-//        let width = 430.0
         
         infectionVC.population = PopulationManager(groupSize: groupSize!, infectionFactor: infectionFactor!, period: period!)
         
         navigationController?.pushViewController(infectionVC, animated: true)
-        
-//        parameters.erase()
-        //MARK: reset all TF
     }
     
     func correctFieldsChecked() -> Bool {

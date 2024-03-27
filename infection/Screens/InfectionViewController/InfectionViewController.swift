@@ -18,7 +18,7 @@ class InfectionViewController: UIViewController  {
     
     var population : PopulationManager?
 //    var engine = Engine()
-//    var width: CGFloat = 0.0
+    var screenWidth: CGFloat = 0.0
     
     override func viewDidLoad() {
         
@@ -30,6 +30,7 @@ class InfectionViewController: UIViewController  {
 //        print("WIDTH: \(width)")
         
 //        population?.width = view.bounds.width
+        
         view.backgroundColor = .white
         infectionCollectionView = InfectionCollectionView(frame: view.frame, collectionViewLayout: UICollectionViewFlowLayout())
         infectionCollectionView.population = population
