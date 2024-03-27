@@ -103,10 +103,10 @@ class PopulationManager: PopulationDelegate {
     private func checkHealtys() -> Bool {
         let result = persons.filter({$0.isInfected}).count < groupSize
         if !result {
-            DispatchQueue.main.async {
-                //FIXME: showAlert
-                //self?.delegate?.finish()
-                print("FinisHH!!!")
+            DispatchQueue.main.async { [weak self] in
+                guard let self else { return }
+//                guard let self else { return }
+                delegate?.finish()
             }
         }
         return result

@@ -42,4 +42,17 @@ extension UIViewController {
         
         present(alertController, animated: true, completion: nil)
     }
+    
+    func showGameOver() {
+        let alertController = UIAlertController(title: nil, message: "Игра завершена", preferredStyle: .alert)
+        
+        let okAction = UIAlertAction(title: "OK", style: .default) { _ in
+            self.dismiss(animated: true)
+        }
+        
+        alertController.addAction(okAction)
+        
+        present(alertController, animated: true, completion: nil)
+    }
+    
 }

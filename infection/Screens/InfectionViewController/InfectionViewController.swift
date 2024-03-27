@@ -119,6 +119,7 @@ extension InfectionViewController: EpidemicCalculatorDelegate {
     
     func finish() {
         //MARK: - show alert
+        showGameOver()
         print("finish")
     }
 }
