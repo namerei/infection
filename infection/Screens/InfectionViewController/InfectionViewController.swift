@@ -92,10 +92,19 @@ class InfectionViewController: UIViewController  {
     
     //MARK: Actions
     @objc private func plusScaleButtonTapped() {
+        
+        if PersonCell.width < 50 {
+            PersonCell.width += 5
+        }
+//        return
         print("+")
     }
     
     @objc private func minusScaleButtonTapped() {
+        if PersonCell.width > 10 {
+            PersonCell.width -= 5
+        }
+//        print("-Width = \(PersonCell.width)")
         print("-")
     }
     
