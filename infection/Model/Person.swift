@@ -11,7 +11,7 @@ class Person {
     var isInfected: Bool = false
     var position: Int = -1
     
-    var columns = 9
+    var columns = 0
 //    var count = 320
     
     weak var delegate: PopulationDelegate?

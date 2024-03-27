@@ -14,10 +14,7 @@ class InfectionViewController: UIViewController  {
     let plusScaleButton = PlusScaleButton()
     let minusScaleButton = MinusScaleButton()
     
-//    var infectedPerson = 0
-    
     var population : PopulationManager?
-//    var engine = Engine()
     var screenWidth: CGFloat = 0.0
     
     override func viewDidLoad() {
@@ -25,11 +22,6 @@ class InfectionViewController: UIViewController  {
         super.viewDidLoad()
  
         population?.delegate = self
-//        infectionCollectionView.population = population
-//        let width = view.bounds.width
-//        print("WIDTH: \(width)")
-        
-//        population?.width = view.bounds.width
         
         view.backgroundColor = .white
         infectionCollectionView = InfectionCollectionView(frame: view.frame, collectionViewLayout: UICollectionViewFlowLayout())
@@ -40,7 +32,6 @@ class InfectionViewController: UIViewController  {
         arrangeMinusScaleButton()
         arrangeInfectionCollectionView()
         
-//        engine.calculateRowAndColumns(width: view.bounds.width, count: population!.groupSize)
     }
     
     //MARK: - set UI

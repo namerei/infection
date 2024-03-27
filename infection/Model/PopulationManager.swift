@@ -35,13 +35,7 @@ class PopulationManager: PopulationDelegate {
     
     //MARK: - engine columns
     var columns: Int = 9
-//    var columns: Int = 0
-//    var engine = Engine()
-//    var row = 36
-//    var columns = 9
    
-//    var newInfectedPositions = [Int]()
-    
     init(groupSize: Int, infectionFactor: Int, period: Int) {
         self.groupSize = groupSize
         self.infectionFactor = infectionFactor
@@ -52,21 +46,19 @@ class PopulationManager: PopulationDelegate {
         for position in 0..<groupSize {
             self.persons.append(Person(position: position))
             self.persons[position].delegate = self
-//            self.persons[position].columns = columns
+            self.persons[position].columns = 9
         }
         infectionStart()
     }
     
     private let stepQueue = DispatchQueue(label: "com.step.queue", qos: .background, attributes: .concurrent)
     private let calc = DispatchQueue(label: "com.calc.queue", qos: .utility, attributes: .concurrent)
-    
-    let dispatchGroup = DispatchGroup()
+    private let dispatchGroup = DispatchGroup()
     
     func calculGroup() {
         persons.filter({$0.isInfected}).forEach { item in
             
             guard let countOfNewInfectedPosition = item.newInfectedPositions?.count, countOfNewInfectedPosition > 0 else { return }
-            //            print("countOfNewInfectedPosition = \(countOfNewInfectedPosition)")
             
             let semaphore = DispatchSemaphore(value: countOfNewInfectedPosition)
             
@@ -88,10 +80,9 @@ class PopulationManager: PopulationDelegate {
     
     
     func step() {
-//        print("-----------step-----------")
         stepQueue.asyncAfter(deadline: .now() + .seconds(period), execute: { [weak self] in
             guard let self else { return }
-            guard self.checkForHealthy() else { return }
+            guard self.checkHealtys() else { return }
             calculGroup()
             step()
         })
@@ -102,26 +93,20 @@ class PopulationManager: PopulationDelegate {
         delegate?.update()
     }
 
-    private func checkForHealthy() -> Bool {
-//        print("checkforhealty!")
-//        let result = infectedPositions.count < count
+    private func checkHealtys() -> Bool {
         let result = persons.filter({$0.isInfected}).count < groupSize
         if !result {
             DispatchQueue.main.async {
+                //FIXME: showAlert
                 //self?.delegate?.finish()
                 print("FinisHH!!!")
-                //FIXME: showAlert
-//                print("CHECK: \(result), \(persons.filter({$0.isInfected}).count), stopped: \(persons.filter({$0.stopped}).count)")
             }
         }
-//        print("CHECK: \(result), \(persons.filter({$0.isInfected}).count), stopped: \(persons.filter({$0.stopped}).count)")
         return result
     }
     
     //MARK: - spread around
-    
     func infectionStart() {
-//        self.columns = Engine().calculateRowAndColumns(width: delegate!.width, count: groupSize)
         step()
     }
 
