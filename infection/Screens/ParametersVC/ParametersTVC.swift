@@ -73,8 +73,10 @@ class ParametersTVC: UITableViewController {
     func goToInfectionVC() {
         // Perform simulation with extracted parameters
         let infectionVC = InfectionViewController()
+        let parameters = [groupSize!, infectionFactor!, period!]
+        infectionVC.parameters = parameters
         
-        infectionVC.population = PopulationManager(groupSize: groupSize!, infectionFactor: infectionFactor!, period: period!)
+//        infectionVC.population = PopulationManager(groupSize: groupSize!, infectionFactor: infectionFactor!, period: period!)
         
         navigationController?.pushViewController(infectionVC, animated: true)
     }

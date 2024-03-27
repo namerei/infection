@@ -20,7 +20,7 @@ protocol PopulationDelegate: AnyObject {
     var groupSize: Int { get set }
     var infectionFactor : Int { get set }
     var period : Int { get set }
-    var columns: Int { get set }
+//    var columns: Int { get set }
 }
 
 class PopulationManager: PopulationDelegate {
@@ -34,19 +34,24 @@ class PopulationManager: PopulationDelegate {
     var period : Int
     
     //MARK: - engine columns
-    var columns: Int = 9
+//    var columns: Int = 9
+    var width: CGFloat = 0.0
    
-    init(groupSize: Int, infectionFactor: Int, period: Int) {
+    init(groupSize: Int, infectionFactor: Int, period: Int, width: CGFloat) {
         self.groupSize = groupSize
         self.infectionFactor = infectionFactor
         self.period = period
-//        self.columns = engine.calculateRowAndColumns(width: width, count: groupSize)
-//        print("COLUMNS = \(self.columns)")
+        print("POP = \(groupSize), width = \(width)")
+        
+        //MARK: - engine
+        let engine = Engine()
+        let columns = engine.calculateColumns(width: width, count: groupSize)
+        print("COLUMNS = \(columns)")
 //        print("POPulation: \(groupSize), \(infectionFactor), \(period)")
         for position in 0..<groupSize {
             self.persons.append(Person(position: position))
             self.persons[position].delegate = self
-            self.persons[position].columns = 9
+            self.persons[position].columns = columns
         }
         infectionStart()
     }

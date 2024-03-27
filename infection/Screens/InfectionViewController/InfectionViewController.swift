@@ -17,10 +17,19 @@ class InfectionViewController: UIViewController  {
     var population : PopulationManager?
     var screenWidth: CGFloat = 0.0
     
+    //MARK: - parameters
+//    var groupSize: Int?
+//    var infectionFactor : Int?
+//    var period : Int?
+    
+    
+    var parameters = [Int]()
+    
     override func viewDidLoad() {
         
         super.viewDidLoad()
- 
+        
+        population = PopulationManager(groupSize: parameters[0], infectionFactor: parameters[1], period: parameters[2], width: view.bounds.width)
         population?.delegate = self
         
         view.backgroundColor = .white
