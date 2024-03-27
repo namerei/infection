@@ -11,11 +11,7 @@ class PersonCell: UICollectionViewCell {
     static var id = "PersonCell"
     static var width: CGFloat = 30
     
-//    override var isSelected: Bool {
-//        didSet {
-//        }
-//    }
-    
+
     override init(frame: CGRect) {
         super.init(frame: frame)
     }
@@ -24,7 +20,4 @@ class PersonCell: UICollectionViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-//    func widthPlus() {
-//        
-//    }
 }

@@ -46,7 +46,6 @@ class ParametersTVC: UITableViewController {
         let infectionFactorIndexPath = IndexPath(row: 0, section: 1)
         let periodIndexPath = IndexPath(row: 0, section: 2)
         
-        // Получаем текст из текстовых полей
         if let groupSizeCell = tableView.cellForRow(at: groupSizeIndexPath),
            let groupSizeTextField = groupSizeCell.contentView.subviews.first as? UITextField,
            let groupSizeText = groupSizeTextField.text {
@@ -71,18 +70,16 @@ class ParametersTVC: UITableViewController {
     }
     
     func goToInfectionVC() {
-        // Perform simulation with extracted parameters
         let infectionVC = InfectionViewController()
         let parameters = [groupSize!, infectionFactor!, period!]
         infectionVC.parameters = parameters
         
-//        infectionVC.population = PopulationManager(groupSize: groupSize!, infectionFactor: infectionFactor!, period: period!)
         
         navigationController?.pushViewController(infectionVC, animated: true)
     }
     
     func correctFieldsChecked() -> Bool {
-        if groupSize == nil || infectionFactor == nil || period == nil || groupSize! < 1 || infectionFactor! < 1 || period! < 1 {
+        if groupSize == nil || infectionFactor == nil || period == nil || groupSize! < 1 || infectionFactor! < 1 || period! < 1 || period! > 1000000 {
             self.showEmptyFieldsAlert()
             return false
         }
@@ -90,7 +87,6 @@ class ParametersTVC: UITableViewController {
     }
 
     func setNavBarButtons() {
-//        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Start", style: .plain, target: self, action: #selector(startSimulation))
         navigationItem.leftBarButtonItem = UIBarButtonItem(title: "info", style: .plain, target: self, action: #selector(showInfo))
     }
     

@@ -8,9 +8,6 @@
 import Foundation
 
 protocol EpidemicCalculatorDelegate: AnyObject {
-//    func update(with items: [Bool], progress: CGFloat)
-    //MARK: - width
-//    var width: CGFloat { get set }
     func update()
     func finish()
 }
@@ -20,7 +17,7 @@ protocol PopulationDelegate: AnyObject {
     var groupSize: Int { get set }
     var infectionFactor : Int { get set }
     var period : Int { get set }
-//    var columns: Int { get set }
+    //    var columns: Int { get set }
 }
 
 class PopulationManager: PopulationDelegate {
@@ -36,8 +33,6 @@ class PopulationManager: PopulationDelegate {
     //MARK: - engine columns
     var width: CGFloat = 0.0
     
-
-   
     init(groupSize: Int, infectionFactor: Int, period: Int, width: CGFloat) {
         self.groupSize = groupSize
         self.infectionFactor = infectionFactor
@@ -49,7 +44,6 @@ class PopulationManager: PopulationDelegate {
         let engine = Engine()
         let columns = engine.calculateColumns(width: width, count: groupSize)
         print("COLUMNS = \(columns)")
-//        print("POPulation: \(groupSize), \(infectionFactor), \(period)")
         for position in 0..<groupSize {
             self.persons.append(Person(position: position))
             self.persons[position].delegate = self
@@ -73,7 +67,9 @@ class PopulationManager: PopulationDelegate {
                 guard let self else {return}
                 semaphore.wait()
                 
-                item.newInfectedPositions?.forEach({self.persons[$0].spread()})
+                calc.async(flags: .barrier) {
+                    item.newInfectedPositions?.forEach({self.persons[$0].spread()})
+                }
                 item.shufflePosition()
                 
                 semaphore.signal()
@@ -96,10 +92,9 @@ class PopulationManager: PopulationDelegate {
     }
     
     private func update() {
-//        print("CHECK:  \(persons.filter({$0.isInfected}).count), stopped: \(persons.filter({$0.stopped}).count)")
         delegate?.update()
     }
-
+    
     private func checkHealtys() -> Bool {
         let result = persons.filter({$0.isInfected}).count < groupSize
         if !result {
@@ -112,17 +107,14 @@ class PopulationManager: PopulationDelegate {
     }
     
     func recalculateColumns() {
-//        let concurrentQueue = DispatchQueue(label: "com.example.concurrentQueue", attributes: .concurrent)
         let columnsGroup = DispatchGroup()
         
-//        concurrentQueue.async { [weak self] in
         calc.async(group: columnsGroup) { [weak self] in
             guard let self else { return }
             let engine = Engine()
             let columns = engine.calculateColumns(width: width, count: groupSize)
             print("NEW COLUMNS = \(columns)")
             for position in 0..<groupSize {
-                persons.append(Person(position: position))
                 persons[position].columns = columns
             }
             
@@ -133,18 +125,9 @@ class PopulationManager: PopulationDelegate {
         }
     }
     
-    //MARK: - spread around
     func infectionStart() {
         step()
     }
 
 }
 
-
-
-
-
-/*
-фикисрованные размеры collection view в ширину
- несколько роазмеров чтобы помещалось от 
- */

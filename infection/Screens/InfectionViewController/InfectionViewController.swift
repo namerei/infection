@@ -17,12 +17,6 @@ class InfectionViewController: UIViewController  {
     var population : PopulationManager?
     var screenWidth: CGFloat = 0.0
     
-    //MARK: - parameters
-//    var groupSize: Int?
-//    var infectionFactor : Int?
-//    var period : Int?
-    
-    
     var parameters = [Int]()
     
     override func viewDidLoad() {
@@ -62,7 +56,7 @@ class InfectionViewController: UIViewController  {
         NSLayoutConstraint.activate([
             infectionCollectionView.topAnchor.constraint(equalTo: plusScaleButton.bottomAnchor, constant: 2),
             infectionCollectionView.widthAnchor.constraint(equalToConstant: view.bounds.width),
-//            infectionCollectionView.heightAnchor.constraint(equalToConstant: view.bounds.height / 1.5)
+
             infectionCollectionView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: 5)
         ])
     }
@@ -91,8 +85,7 @@ class InfectionViewController: UIViewController  {
     
     //MARK: Actions
     @objc private func plusScaleButtonTapped() {
-        
-        if PersonCell.width < 40 {
+        if PersonCell.width < 30 {
             PersonCell.width += 5
             population?.recalculateColumns()
         }
@@ -103,7 +96,6 @@ class InfectionViewController: UIViewController  {
             PersonCell.width -= 5
             population?.recalculateColumns()
         }
-        print("-")
     }
     
 }
@@ -118,6 +110,5 @@ extension InfectionViewController: EpidemicCalculatorDelegate {
     func finish() {
         //MARK: - show alert
         showGameOverAlert()
-//        print("finish")
     }
 }

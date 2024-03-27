@@ -21,7 +21,6 @@ class ResultLabel: UILabel {
     private func setupLabel() {
         self.textAlignment = .center
         self.textColor = .black
-//        self.backgroundColor = .yellow
         self.font = UIFont.systemFont(ofSize: 18)
         self.numberOfLines = 0
         self.translatesAutoresizingMaskIntoConstraints = false

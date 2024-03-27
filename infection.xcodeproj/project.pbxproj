@@ -14,10 +14,8 @@
 		FA0B4F292BAC445000BC6CE1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA0B4F272BAC445000BC6CE1 /* LaunchScreen.storyboard */; };
 		FA0B4F502BAEF2EF00BC6CE1 /* PersonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0B4F4F2BAEF2EF00BC6CE1 /* PersonCell.swift */; };
 		FAF2BBEC2BB1F99300F80859 /* PopulationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF2BBEB2BB1F99300F80859 /* PopulationManager.swift */; };
-		FAF2BBEE2BB3E91F00F80859 /* ParametersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF2BBED2BB3E91F00F80859 /* ParametersTableViewController.swift */; };
 		FAF2BBF32BB3F29B00F80859 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF2BBF22BB3F29B00F80859 /* CustomTextField.swift */; };
 		FAF2BBFF2BB3FF8600F80859 /* ViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF2BBFE2BB3FF8600F80859 /* ViewControllerExtension.swift */; };
-		FAF2BC032BB4363900F80859 /* ParameterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF2BC022BB4363900F80859 /* ParameterCell.swift */; };
 		FAF2BC072BB457CF00F80859 /* ParametersTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF2BC062BB457CF00F80859 /* ParametersTVC.swift */; };
 		FAF2BC092BB4845B00F80859 /* InfectionCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF2BC082BB4845B00F80859 /* InfectionCollectionView.swift */; };
 		FAF2BC0B2BB4996C00F80859 /* ResultLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF2BC0A2BB4996C00F80859 /* ResultLabel.swift */; };
@@ -37,10 +35,8 @@
 		FA0B4F2A2BAC445000BC6CE1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA0B4F4F2BAEF2EF00BC6CE1 /* PersonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonCell.swift; sourceTree = "<group>"; };
 		FAF2BBEB2BB1F99300F80859 /* PopulationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopulationManager.swift; sourceTree = "<group>"; };
-		FAF2BBED2BB3E91F00F80859 /* ParametersTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParametersTableViewController.swift; sourceTree = "<group>"; };
 		FAF2BBF22BB3F29B00F80859 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		FAF2BBFE2BB3FF8600F80859 /* ViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerExtension.swift; sourceTree = "<group>"; };
-		FAF2BC022BB4363900F80859 /* ParameterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParameterCell.swift; sourceTree = "<group>"; };
 		FAF2BC062BB457CF00F80859 /* ParametersTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParametersTVC.swift; sourceTree = "<group>"; };
 		FAF2BC082BB4845B00F80859 /* InfectionCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfectionCollectionView.swift; sourceTree = "<group>"; };
 		FAF2BC0A2BB4996C00F80859 /* ResultLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultLabel.swift; sourceTree = "<group>"; };
@@ -142,8 +138,6 @@
 		FAF2BBF72BB3F7EE00F80859 /* ParametersVC */ = {
 			isa = PBXGroup;
 			children = (
-				FAF2BBED2BB3E91F00F80859 /* ParametersTableViewController.swift */,
-				FAF2BC022BB4363900F80859 /* ParameterCell.swift */,
 				FAF2BC062BB457CF00F80859 /* ParametersTVC.swift */,
 			);
 			path = ParametersVC;
@@ -247,7 +241,6 @@
 			files = (
 				FAF2BBFF2BB3FF8600F80859 /* ViewControllerExtension.swift in Sources */,
 				FA0B4F502BAEF2EF00BC6CE1 /* PersonCell.swift in Sources */,
-				FAF2BC032BB4363900F80859 /* ParameterCell.swift in Sources */,
 				FAF2BC0E2BB49DC300F80859 /* PlusScaleButton.swift in Sources */,
 				FAF2BC0B2BB4996C00F80859 /* ResultLabel.swift in Sources */,
 				FA0B4F212BAC444E00BC6CE1 /* InfectionViewController.swift in Sources */,
@@ -260,7 +253,6 @@
 				FAF2BC072BB457CF00F80859 /* ParametersTVC.swift in Sources */,
 				FAF2BBEC2BB1F99300F80859 /* PopulationManager.swift in Sources */,
 				FAF2BC142BB4A7CA00F80859 /* Person.swift in Sources */,
-				FAF2BBEE2BB3E91F00F80859 /* ParametersTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

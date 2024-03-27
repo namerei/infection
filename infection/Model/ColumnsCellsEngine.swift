@@ -10,10 +10,8 @@ import Foundation
 
 class Engine {
     var row = 0
-    //    var columns = 0
     var width: CGFloat = 0
     var count = 0
-    
     
     func calculateColumns(width: CGFloat, count: Int) -> Int {
         self.count = Int(count)
